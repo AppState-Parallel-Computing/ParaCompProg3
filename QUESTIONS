@@ -1,0 +1,38 @@
+1) What is the largest vector size for 16 threads in which the sequential version is faster
+than the threaded version (speedup is less than 1, but for the next power of 2 size, the 
+speedup is greater than 1)? Give the scan command and the output of the command as the
+answer to this question. Be sure your makefile is using CFLAGS instead of DEBUGCFLAGS to
+produce these results.
+
+2) Explain why a sequential version can sometimes be slower than a threaded version.
+
+3) A cost-optimal solution of the threaded version must run in no more than O(N) time since
+this is the complexity of the sequential version.  Suppose that N is equal to 2^32.  How
+many threads need to be created so that the complexity of the threaded version is O(N)?
+(See book for explanation.)
+
+
+4) How large is the subarray operated on by each thread assuming that N is equal to 2^32
+and the number of processors is what you determined in problem 3?
+
+
+5) Fill in the table below to show the speedup for the indicated number of threads
+for a fixed array size of 2^20  (-s 20)
+Number of Threads        Speedup
+       2
+       4 
+       8
+      16
+      32
+You should see that the speedup increased and then decreased. Explain why.
+
+6) Fill in the table below for these various thread counts and array sizes. T
+This is to ensure that your scan works for cases where the size of the array
+is not a multiple of the number of threads. And that your scan works where the
+size of the array can't be stored in a 32-bit int.
+
+Size of Array   Number of Threads   Speedup
+     2^4 = 16         15              
+     2^4 = 16         16             
+     2^32             32            
+     2^31             31           
