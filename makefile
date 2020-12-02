@@ -1,6 +1,7 @@
 CC = g++
 DEBUGFLAGS = -g -c -std=c++11
-CFLAGS = -c -std=c++11 -O2
+NODEBUGFLAGS = -c -std=c++11 -O2
+CFLAGS = $(NODEBUGFLAGS)
 OBJS = scan.o SequentialScan.o ThreadedScan.o
 
 scan: $(OBJS)
