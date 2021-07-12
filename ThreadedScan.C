@@ -34,10 +34,17 @@ float ThreadedScan::performScan()
 
   //Step 1:
   //Create threads so that each thread performs the prefix
-  //scan on the subarray
+  //scan on the subarray. Note that for the do_in_parallel 
+  //we create n/k (numThreads) threads.  Each of those will execute
+  //the body of the loop.
 
   //Step 2:
-  //Main thread performs prefix scan of right most values in each subarray
+  //We are going to cheat here and just have the main thread perform a prefix 
+  //scan of the right most values in each subarray.  The code in the book
+  //has an outer loop that runs log(n/k) times. During each iteration, it
+  //creates threads that run in parallel. But creating all of these threads
+  //isn't very efficient (although it has better algorithmic complexity)
+  //so we're going to cheat and let the main thread do this work. 
   
   //Step 3:
   //Create more threads so that each thread adds the value computed
