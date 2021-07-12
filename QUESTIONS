@@ -34,5 +34,4 @@ size of the array can't be stored in a 32-bit int.
 Size of Array   Number of Threads   Speedup
      2^4 = 16         15              
      2^4 = 16         16             
-     2^32             32            
-     2^31             31           
+     2^31             31                       (This one takes awhile.)
