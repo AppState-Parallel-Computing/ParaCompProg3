@@ -1,10 +1,10 @@
 1) What is the largest vector size for 16 threads in which the sequential version is faster
-than the threaded version (speedup is less than 1, but for the next power of 2 size, the 
-speedup is greater than 1)? Give the scan command and the output of the command as the
-answer to this question. Be sure your makefile is using CFLAGS instead of DEBUGCFLAGS to
+than the threaded version (speedup is less than 1 for 2^x, but for the next power of 2 size,
+e.g. 2^(x+1), the speedup is greater than 1)? Give the scan command and the output of the command as the
+answer to this question. Be sure your makefile is using NODEBUGFLAGS instead of DEBUGFLAGS to
 produce these results.
 
-2) Explain why a sequential version can sometimes be slower than a threaded version.
+2) Explain why a sequential version can sometimes be faster than a threaded version.  
 
 3) A cost-optimal solution of the threaded version must run in no more than O(N) time since
 this is the complexity of the sequential version.  Suppose that N is equal to 2^32.  How
